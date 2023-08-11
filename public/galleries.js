@@ -215,8 +215,9 @@ const cancelUpdate = () => {
       .get(`${baseUrl}/api/galleries`)
       .then((res) => {
         allGalleries = res.data;
-        console.log(allGalleries)
         createGallery(allGalleries);
+        getDestinationsForForm()
+        
       })
       .catch((err) => console.error(err));
   };
@@ -224,15 +225,15 @@ const cancelUpdate = () => {
   document.addEventListener("DOMContentLoaded", getGalleries);
   
 
-  const getGalleriesData = () => {
-    axios
-      .get(`${baseUrl}/api/galleries`)
-      .then((res) => {
-        allGalleries = res.data;
-        createGallery(allGalleries);
-      })
-      .catch((err) => console.error(err));
-  };
+  // const getGalleriesData = () => {
+  //   axios
+  //     .get(`${baseUrl}/api/galleries`)
+  //     .then((res) => {
+  //       allGalleries = res.data;
+  //       createGallery(allGalleries);
+  //     })
+  //     .catch((err) => console.error(err));
+  // };
     
   const populateDestinationSelect = () => {
     const destinationSelect = document.querySelector("#destinationSelect");

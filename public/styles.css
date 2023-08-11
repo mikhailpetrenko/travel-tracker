@@ -1,0 +1,397 @@
+body {
+  font-family: "Book Antiqua", sans-serif;
+  background-image: url("https://images.unsplash.com/photo-1517479149777-5f3b1511d5ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+h1 {
+  font-family: "Book Antiqua", serif;
+  font-weight: semibold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+#filterDropdown {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.3s ease-in-out;
+  width: 120px; 
+}
+
+#filterDropdown:hover {
+  border-color: #999;
+}
+
+#filterDropdown:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+
+#blurry-filter {
+  width: 100%;
+  height: 9rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4' numOctaves='1'/%3E%3C/filter%3E%3Crect width='100' height='100' style='filter:url(%23f)' opacity='.2'/%3E%3C/svg%3E");
+  mask: linear-gradient(black 7rem, transparent);
+  -webkit-mask: linear-gradient(black 7rem, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  pointer-events: none;
+  touch-action: none;
+}
+
+#logo {
+  width: 40px;
+  height: auto;
+  margin-right: 10px; 
+}
+
+
+nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#title {
+  font-family: "Book Antiqua", serif;
+  font-size: 50px;
+  font-weight: semibold;
+  font-stretch: expanded;
+  letter-spacing: 2px; 
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+
+nav a {
+  font-family: "Book Antiqua", serif;
+  display: inline-block;
+  margin: 15px;
+  text-decoration: none;
+  color: white;
+  opacity: 0.7;
+  font-size: 130%;
+  transition: opacity 0.2s ease-in-out;
+}
+
+nav a:hover,
+nav a:focus {
+  opacity: 1;
+}
+
+header {
+  font-family: "Book Antiqua", serif;
+  width: 100%;
+  height: 8rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+header > div {
+  width: calc(100% - 3rem);
+  max-width: 800px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+
+h4 {
+  margin-bottom: 10px;
+}
+
+.add-section {
+  position: fixed;
+  top: 265px;
+  right: 20px;
+  width: 200px; 
+  padding: 20px; 
+  background-color: #f7f7f7; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  opacity: 0.75;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.toggle-visited-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  float: right;
+  margin-top: -10px;
+  margin-right: -10px;
+}
+
+.toggle-visited-button.visited {
+  background-color: green;
+}
+
+
+
+section {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+select {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Destination Blocks */
+#display-section {
+  text-align: left;
+}
+
+
+
+.destination {
+  display: inline-block;
+  width: 300px;
+  margin: 10px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+.destination:hover {
+  opacity: 1;
+}
+
+
+.destination img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.destination h2 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.destination button {
+  margin-top: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.destination.Beach {
+  background-color: #ffe082; 
+}
+
+.destination.Culture {
+  background-color: #98cbe3; 
+}
+
+.destination.Nature {
+  background-color: #c5e1a5; 
+}
+
+.destination.Urban {
+  background-color: #eba3bb; 
+}
+
+/* Filter Dropdown
+#filterDropdown {
+  padding: 5px;
+} */
+
+.toggle-visited-prompt {
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.visited {
+  color: green;
+}
+
+.not-visited {
+  color: red;
+}
+
+
+.delete-button {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.gallery:hover .delete-button {
+  opacity: 0.9;
+}
+
+
+
+
+.gallery {
+  --s: 380px; 
+  --g: 10px; 
+  --f: 1.75;
+
+  display: grid;
+  gap: var(--g);
+  width: calc(2*var(--s) + 2*var(--g));
+  aspect-ratio: 1;
+  grid-template-columns: repeat(2, auto);
+  position: relative; 
+  margin-top: 20px; 
+  margin-left: 350px;
+}
+
+.gallery-name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center; 
+}
+
+
+.gallery > img {
+  width: 0;
+  height: 0;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  filter: grayscale(80%);
+  transition: .35s linear;
+}
+
+.gallery img:hover{
+  filter: grayscale(0);
+  width:  calc(var(--s)*var(--f));
+  height: calc(var(--s)*var(--f));
+}
+
+
+
+.buttons-container {
+  position: absolute;
+  top: 0;
+  left: -80px; 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.update-button,
+.delete-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 20%;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.delete-button {
+  top: 35px; 
+}
+
+.update-button:hover,
+.delete-button:hover {
+  opacity: 1;
+}
+
+.update-button.visited,
+.delete-button.visited {
+  background-color: green;
+}
+
+.update-button {
+  background-color: blue;
+}
+
+#add-gallery-form-container {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  width: 300px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  opacity: 0.75;
+  transition: opacity 0.3s ease-in-out;
+}

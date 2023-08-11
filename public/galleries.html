@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Galleries</title>
+</head>
+<body>
+  <div id="blurry-filter"></div>
+  <header>
+    <div>
+      <img src="https://img001.prntscr.com/file/img001/5rfdYBjRR1Ge631rTlEQOg.png" alt="Logo" id="logo">
+      <div id="title">Misha's Trip Tracker</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="high_ranking.html">High Ranking Destinations</a>
+        <a href="visited.html">Visited</a>
+        <a href="galleries.html">Galleries</a>
+    </nav>
+    </div>
+  </header>
+
+  <h1>Galleries</h1>
+  <!-- <section>
+    <h4>Filter by Type</h4>
+    <select id="filterDropdown">
+      <option value="all">All</option>
+      <option value="Beach">Beach</option>
+      <option value="Culture">Culture</option>
+      <option value="Nature">Nature</option>
+      <option value="Urban">Urban</option>
+    </select> -->
+  </section>
+
+  <div id="galleries">
+  
+  </div>
+
+  <div id="galleryContainer"></div>
+
+  <div id="add-gallery-form-container">
+    <h2>Add New Gallery</h2>
+  <form id="add-gallery-form">
+    <label for="destinationSelect">Select Destination:</label>
+    <select id="destinationSelect" required>
+    </select>
+    <label for="img1">Image 1:</label>
+    <input type="text" id="img1" required>
+    <br>
+    <label for="img2">Image 2:</label>
+    <input type="text" id="img2" required>
+    <br>
+    <label for="img3">Image 3:</label>
+    <input type="text" id="img3" required>
+    <br>
+    <label for="img4">Image 4:</label>
+    <input type="text" id="img4" required>
+    <br>
+    <button type="submit">Add Gallery</button>
+    <br>
+    
+   
+  </form>
+  
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script src="./main.js"></script>
+  <script src="./galleries.js"></script>
+
+</body>
+</html>

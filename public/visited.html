@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Visited places</title>
+</head>
+<body>
+  <div id="blurry-filter"></div>
+  <header>
+    <div>
+      <img src="https://img001.prntscr.com/file/img001/jZqyFE4QTz29--ov1yOfsA.png" alt="Logo" id="logo">
+      <div id ="title">Misha's Trip Tracker</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="high_ranking.html">High Ranking Destinations</a>
+        <a href="visited.html">Visited</a>
+        <a href="galleries.html">Galleries</a>
+    </nav>
+    </div>
+  </header>
+  
+  <h1>Visited Places</h1>
+  <section>
+    <h4>Filter by Type</h4>
+    <select id="filterDropdown">
+      <option value="all">All</option>
+      <option value="Beach">Beach</option>
+      <option value="Culture">Culture</option>
+      <option value="Nature">Nature</option>
+      <option value="Urban">Urban</option>
+    </select>
+  </section>
+  
+  <div id="visited-page">
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script src="./main.js"></script>
+  <script src="./visited.js"></script>
+</body>
+</html>
